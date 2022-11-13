@@ -9,7 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Assignment4 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -22,20 +22,18 @@ public class Assignment4 {
 		// Select Country
 		driver.findElement(By.id("j_idt87:country_label")).click();
 		driver.findElement(By.id("j_idt87:country_3")).click();
-		
+		Thread.sleep(3000);
 		
 		// Select city
 		driver.findElement(By.id("j_idt87:city_label")).click();
 		driver.findElement(By.id("j_idt87:city_1")).click();
-		
-		/*Select Course
-		 WebElement df = driver.findElement(By.id("j_idt87:auto-complete_hinput"));
-		df.click();
-		
-		driver.findElement(By.className("ui-autocomplete-query")).click();
+		Thread.sleep(3000);
+	
 		//Select Language
 		driver.findElement(By.id("j_idt87:lang_label")).click();		
 		driver.findElement(By.id("j_idt87:lang_3")).click();
+		Thread.sleep(3000);
+		
 		//Select Values
 		driver.findElement(By.id("j_idt87:value_label")).click();
 		driver.findElement(By.id("j_idt87:value_2")).click();
